@@ -1,0 +1,545 @@
+body{
+  user-select: none;
+  margin: 0;
+  text-align: center;
+}
+h1{
+  font-size: 40px;
+}
+h2{
+  font-size: 40px;
+  margin: 40px 0 10px 0;
+}
+h3{
+  font-size: 30px;
+  margin-top: 10px;
+  font-weight: lighter;
+  margin: 30px auto 0;
+  text-align: left;
+}
+h4{
+  font-size: 20px;
+  margin: 10px 0;
+  color: #efefef;
+}
+h5{
+  font-size: 30px;
+  padding-left: 10px;
+  margin: 10px 0;
+  text-align: left;
+}
+/* ヘッダー */
+header{
+  border-bottom: 1px solid #868585;
+}
+.title{
+  font-size: 20px;
+}
+.headul a{
+  text-decoration: none;
+  color: #000;
+}
+.headli{
+  display: inline-block;
+  margin: 0 5px;
+  position: relative;
+}
+.headli::after{
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: burlywood;
+  transform: scale(0, 1);
+  transform-origin: center top;
+  transition: 0.3s;
+}
+.headli:hover::after{
+  transform: scale(1, 1);
+}
+.manzli{
+  width: 28px;
+  height: 37px;
+  transition: 0.1s ease-in;
+  padding-right: 5px;
+  vertical-align: bottom;
+}
+/* メニューバー */
+#hanberger{
+  background-color: #000;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 80px;
+  height: 65px;
+  padding-top: 15px;
+  color: cornsilk;
+  font-size: 14px;
+  z-index: 2;
+  cursor: pointer;
+}
+.panz{
+  width: 45px;
+  height: 7px;
+  background-color: cornsilk;
+  margin: 0 auto 7px;
+}
+#sabmenu{
+  position: fixed;
+  top: 0;
+  opacity: 0.9;
+  display: none;
+  width: 20%;
+  height: 100%;
+  font-size: 14px;
+  background: -moz-linear-gradient(to left, blue, navy);
+  background: -webkit-linear-gradient(left, blue, navy);
+  background: linear-gradient(right, blue, navy);
+  z-index: 99;
+}
+#sabmenu h1{
+  color: white;
+  margin-top: 10px;
+}
+.sabul{
+  padding: 0 14%;
+}
+.sabli{
+  list-style-type: none;
+  line-height: 40px;
+  border-bottom: 1px solid white;
+  position: relative;
+}
+.sabli a{
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.sabli a:hover{
+  color: #FF9933;
+}
+.sabli:hover{
+  border-bottom: 1px solid #FF9933;
+}
+.janp{
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  line-height: 30px;
+}
+#close{
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 25px;
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: #FF9933;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  transition: 0.4s;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+#close:hover{
+  background-color: #fff;
+  border-color: #fff;
+  color: #FF9933;
+}
+/* メイン */
+.meindiv{
+  width: 80%;
+  margin:  40px auto;
+  padding: 20px 60px;
+  text-align: center;
+  background-color: #fff;
+}
+.mein{
+  padding: 10px 0;
+  background-color: #CCCCCC;
+}
+.head{
+  border-left: 6px solid #FF9933;
+  margin: auto;
+  padding-left: 10px;
+  background-color: #efefef;
+  border-bottom: 3px solid #b5b5b5;
+  text-align: left;
+}
+.head2{
+  width: 90%;
+  padding-left: 10px;
+  background-color: #fceeaf;
+  margin: auto;
+}
+.head2 p{
+  text-align: right;
+  font-size: 18px;
+  padding: 0 50px 10px 0;
+  margin: 0;
+}
+/* zyanpai.html */
+.box1{
+  width: 650px;
+  margin: auto;
+}
+.box2{
+  text-align: left;
+}
+.total{
+  text-align: right;
+  margin: 0;
+}
+.suhai{
+  width: 550px;
+  height: 70px;
+}
+.suhupai{
+  width: 240px;
+  height: 70px;
+}
+.sangenpai{
+  width: 180px;
+  height: 70px;
+}
+.suhai2{
+  width: 500px;
+  height: 55px;
+}
+.suhupai2{
+  width: 220px;
+  height: 55px;
+  margin-top: 40px;
+}
+.sangenpai2{
+  width: 160px;
+  height: 55px;
+}
+.lrbox{
+  display: flex;
+  text-align: center;
+}
+.boxl{
+  flex: 1;
+}
+.boxr{
+  flex: 1;
+}
+.balloon{
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 0 1.5em 15px;
+  padding: 85px 5px;
+  width: 80%;
+  height: 300px;
+  text-align: center;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: bold;
+  background: #fdc957;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+.balloon:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -28px;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-right: 15px solid #fdc957;
+  z-index: 0;
+}
+.painum{
+  margin: 30px 0;
+}
+.num{
+  font-size: 62px;
+  margin: 0;
+  line-height: 45px;
+}
+.iinum{
+  font-size: 20px;
+  margin:0 0 0 6px;
+  line-height: 45px;
+}
+.su-zi{
+  font-size: 35px;
+  margin: 0;
+  line-height: 5px;
+}
+.san-zi{
+  font-size: 35px;
+  margin: 0 0 0 17px;
+  line-height: 5px;
+}
+/* .yaku.html */
+.handiv{
+  border: 2px solid #ff9252;
+  margin: 30px 0 60px;
+  padding: 0;
+  background-color: #4983ff;
+  overflow: scroll;
+  height: 450px;
+  position: relative;
+}
+.nakidiv{
+  border: 2px solid #ff9252;
+  margin: 30px 0 60px;
+  padding: 0;
+  background-color: #37c93e;
+  overflow: scroll;
+  height: 450px;
+  position: relative;
+}
+.sticky{
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.absol{
+  position: absolute;
+  top: 56px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 0;
+}
+.absol2{
+  position: absolute;
+  top: 56px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 0;
+}
+#han1{
+  display: block;
+}
+#han2{
+  display: none;
+}
+#han3{
+  display: none;
+}
+#han6{
+  display: none;
+}
+#mangan{
+  display: none;
+}
+#yakuman{
+  display: none;
+}
+#yakuman2{
+  display: none;
+}
+#menzen{
+  display: block;
+}
+#kuisagari{
+  display: none;
+}
+#sonota{
+  display: none;
+}
+#bornas{
+  display: none;
+}
+.hanul{
+  display: flex;
+  padding: 10px 0;
+  width: 100%;
+  margin: 0;
+  background-color: #4983ff;
+}
+.nakiul{
+  display: flex;
+  padding: 10px 0;
+  width: 100%;
+  margin: 0;
+  background-color: #37c93e;
+}
+.hanli{
+  flex: 1;
+  color: #fdc957;
+  background-color: #1e01a0;
+  font-weight: bold;
+  line-height: 46px;
+  margin: 0px 2px;
+  list-style-type: none;
+}
+.nakili{
+  flex: 1;
+  color: #fdc957;
+  background-color: #027407;
+  font-weight: bold;
+  line-height: 46px;
+  margin: 0px 2px;
+  list-style-type: none;
+}
+.over1{
+  background: #4153f5;
+}
+.over2{
+  background: #02a80a;
+}
+.yakutitle{
+  background-color: #1e01a0;
+  color: #fdc957;
+  font-size: 24px;
+  line-height: 50px;
+  /* text-decoration: underline; */
+}
+.yakutitle2{
+  background-color: #027407;
+  color: #fdc957;
+  font-size: 24px;
+  line-height: 50px;
+  /* text-decoration: underline; */
+}
+.yakutitle span{
+  float: right;
+  font-size: 20px;
+  margin-right: 10px;
+}
+.yakutitle2 span{
+  float: right;
+  font-size: 22px;
+  margin-right: 10px;
+}
+.yaku{
+  display: inline-block;
+}
+.yaku img{
+  width: 50px;
+  height: 65px;
+}
+.tumo{
+  display: inline-block;
+  margin-left: 20px;
+}
+.tumo img{
+  width: 50px;
+  height: 65px;
+}
+.boxnagasi{
+  width: 400px;
+  margin: auto;
+  text-align: left;
+  font-size: 1px;
+}
+.pnagasi{
+  margin: 0;
+}
+.boxnagasi img{
+  width: 50px;
+  height: 65px;
+}
+.hancolor1{
+  color: #fca5ed;
+}
+.hancolor2{
+  color: #37d7ff;
+}
+.hancolor3{
+  color: #eff141;
+}
+.hancolor4{
+  color: #ba42ff;
+}
+.hancolor5{
+  color: #0828df;
+}
+.hancolor6{
+  color: #fc1212;
+}
+.hancolor7{
+  color: #fc1212;
+}
+
+footer{
+  background-color: #CCCCCC;
+}
+.bottomtop{
+  margin-bottom: 20px;
+}
+.copy{
+  border-top: 1px solid #868585;
+  padding: 30px 0;
+}
+.copy p{
+  margin: 0;
+  font-size: 12px;
+  color: #777777;
+}
+
+@media screen and (max-width: 959px) {
+#sabmenu h1{
+  margin-bottom: 0;
+  font-size: 20px;
+}
+.sabul{
+  margin-top: 0;
+}
+.sabli{
+  font-size: 12px;
+  line-height: 32px;
+}
+
+.resptab_suhai{
+  width: 300px;
+  height: 45px;
+}
+.resptab_zihai{
+  width: 270px;
+  height: 60px;
+}
+.balloon{
+  font-size: 16px;
+}
+.painum{
+  margin: 0;
+}
+.num{
+  font-size: 34px;
+  margin: 0;
+  line-height: 22px;
+}
+.iinum{
+  font-size: 11px;
+  margin: 0 0 0 6px;
+  line-height: 45px;
+}
+.su-zi{
+  font-size: 21px;
+  margin: 20px 0 0;
+}
+.san-zi{
+  font-size: 30px;
+  margin: 20px 0 0 17px;
+}
+
+.yaku img{
+  width: 30px;
+  height: 40px;
+}
+.tumo img{
+  width: 30px;
+  height: 40px;
+}
+.hanli{
+  font-size: 14px;
+}
+.nakili{
+  font-size: 14px;
+}
+
+}
